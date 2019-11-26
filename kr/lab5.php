@@ -24,7 +24,22 @@ Decrement value by one. Value is now 10.
 
 */
 
-echo $var += 8;
+echo $var = 8;
+echo "<br>";
+echo $var += 2;
+echo "<br>";
+echo $var -= 4;
+echo "<br>";
+echo $var *= 5;
+echo "<br>";
+echo $var /= 3;
+echo "<br>";
+echo ++$var;
+echo "<br>";
+echo --$var;
+echo "<br>";
+
+
 
 ?>
 </body>
