@@ -11,12 +11,34 @@
 /*
 
 Laboratory Exercise # 11 – Objects and Classes
+
 1. Write a simple PHP class which displays the following string. 'MyClass class has initialized !'. Hint: use the constructor method to output the string.
+
 2. Write a simple PHP class which displays an introductory message like "Hello All, I am Scott", where "Scott" is an argument value of the method within the class.
+
 3. From the functions you created in Exercise 10, create a class named Mathematics with the following functions as your class methods. And make an output example of each method by invoking the class.
+
 4. Make a class named Mathematics2 which extends the Mathematics
 
 */
+
+class MyClass {
+
+    public $name = '';
+
+    public function __construct( $name ) {
+        $this->name = $name;
+    }
+
+}
+
+$person = new MyClass( "String" );
+echo $person->name;
+
+echo "<br><br>";
+	
+
+
 
 
 
