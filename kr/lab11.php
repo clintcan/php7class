@@ -18,7 +18,7 @@ Laboratory Exercise # 11 – Objects and Classes
 
 3. From the functions you created in Exercise 10, create a class named Mathematics with the following functions as your class methods. And make an output example of each method by invoking the class.
 
-4. Make a class named Mathematics2 which extends the Mathematics s
+4. Make a class named Mathematics2 which extends the Mathematics
 
 */
 
@@ -34,6 +34,26 @@ class MyClass {
 
 $person = new MyClass( "String" );
 echo $person->name;
+
+#--------------------------
+echo "<br><br>";
+
+$test = new MyClass( "String" );
+
+
+class IntroMessage {
+
+    public $name = 'Test';
+
+    public function __construct( $name ) {
+        $this->value = $name;
+    }
+
+}
+
+echo $test->name;
+
+//echo $test->value;
 
 echo "<br><br>";
 	
