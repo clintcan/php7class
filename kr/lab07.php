@@ -10,12 +10,14 @@
 
 /*
 
-The “.” Operator contatenates two strings. For this exercise, assuming a variable named $around with the value “around”, use the contatenation operator to output the text:
+The â€œ.â€ Operator contatenates two strings. For this exercise, assuming a variable named $around with the value â€œaroundâ€, use the contatenation operator to output the text:
 What goes around comes around.
 
 */
 $around = "around";
 echo "What goes $around comes $around";
+  
+// Comment - line should be: echo 'what goes '.$around.' comes '.$around;
 
 ?>
 </body>
