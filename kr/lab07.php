@@ -15,7 +15,7 @@ What goes around comes around.
 
 */
 $around = "around";
-echo "What goes $around comes $around";
+echo "What goes ".$around." comes ".$around;
   
 // Comment - line should be: echo 'what goes '.$around.' comes '.$around;
 
