@@ -33,11 +33,15 @@
 		$xml = simplexml_load_file($url) or die("Error: Cannot create object");
 		?>
         
-        <table cellpadding="5px" cellspacing="0" bgcolor="#006600">
-        	<tr><td><?php echo "Country : ".$xml->city['name']; ?></td><td><?php echo "Weather : ".$xml->weather['value']; ?></td></tr>
-        	<tr><td><?php echo "City : ".$xml->city->country; ?></td><td rowspan="3"><img src="cloud.png" width="150px" /></td></tr>
-        	<tr><td><?php echo "Humidity : ".$xml->humidity['value'].$xml->humidity['unit']; ?></td></tr>
-        	<tr><td><?php echo "Wind Speed : ".$xml->wind->speed['value'].$xml->wind->speed['unit']; ?></td></tr>
+        <table cellpadding="10px" cellspacing="0" bgcolor="#006600">
+        	<tr><td><strong><?php echo "Country : ".$xml->city['name']; ?></strong></td>
+            	<td><strong><?php echo "Weather : ".$xml->weather['value']; ?></strong></td>
+           	</tr>
+        	<tr><td><strong><?php echo "City : ".$xml->city->country; ?></strong></td>
+            	<td rowspan="3"><img src="cloud.png" width="150px" /></td>
+           	</tr>
+        	<tr><td><strong><?php echo "Humidity : ".$xml->humidity['value'].$xml->humidity['unit']; ?></strong></td></tr>
+        	<tr><td><strong><?php echo "Wind Speed : ".$xml->wind->speed['value'].$xml->wind->speed['unit']; ?></strong></td></tr>
         </table>
         
         <?php
