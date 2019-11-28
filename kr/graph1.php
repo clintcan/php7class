@@ -1,6 +1,6 @@
 <?php
 
-$sean = $_GET['sean']; //http://localhost/20191127%20Repository/php7class/kr/graph1.php?sean=55&kr=53&jao=56
+$sean = $_GET['sean'];
 $kr = $_GET['kr'];
 $jao = $_GET['jao'];
 
