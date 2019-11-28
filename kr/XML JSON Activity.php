@@ -29,22 +29,21 @@
 <hr />
 	<h3><strong>XML</strong></h3>
 	<?php
-		//$url = "https://api.openweathermap.org/data/2.5/weather?q=Manila,PH&appid=b4396b5fdb2078756f77d6f7eec6273a&mode=xml";
-		//$xml = simplexml_load_file($url) or die("Error: Cannot create object");
-		//echo "<pre>";
-		
+		$url = "https://api.openweathermap.org/data/2.5/weather?q=Manila,PH&appid=b4396b5fdb2078756f77d6f7eec6273a&mode=xml";
+		$xml = simplexml_load_file($url) or die("Error: Cannot create object");
 		?>
         
-        <table cellpadding="5px" bgcolor="#006600">
-        	<tr><td>1</td><td rowspan="4">1</td></tr>
-        	<tr><td>1</td></tr>
-        	<tr><td>1</td></tr>
-        	<tr><td>1</td></tr>
+        <table cellpadding="5px" cellspacing="0" bgcolor="#006600">
+        	<tr><td><?php echo "Country : ".$xml->city['name']; ?></td><td><?php echo "Weather : ".$xml->weather['value']; ?></td></tr>
+        	<tr><td><?php echo "City : ".$xml->city->country; ?></td><td rowspan="3"><img src="cloud.png" width="150px" /></td></tr>
+        	<tr><td><?php echo "Humidity : ".$xml->humidity['value'].$xml->humidity['unit']; ?></td></tr>
+        	<tr><td><?php echo "Wind Speed : ".$xml->wind->speed['value'].$xml->wind->speed['unit']; ?></td></tr>
         </table>
         
         <?php
 		
 		/*
+		echo "<pre>";
 		echo "Country : ".$xml->city['name']."<br>";
 		echo "City : ".$xml->city->country."<br>";
 		echo "Humidity : ".$xml->humidity['value'].$xml->humidity['unit']."<br>";
