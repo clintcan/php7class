@@ -43,63 +43,16 @@
         	<tr><td><strong><?php echo "Humidity : ".$xml->humidity['value'].$xml->humidity['unit']; ?></strong></td></tr>
         	<tr><td><strong><?php echo "Wind Speed : ".$xml->wind->speed['value'].$xml->wind->speed['unit']; ?></strong></td></tr>
         </table>
-        
-        <?php
-		
-		/*
-		echo "<pre>";
-		echo "Country : ".$xml->city['name']."<br>";
-		echo "City : ".$xml->city->country."<br>";
-		echo "Humidity : ".$xml->humidity['value'].$xml->humidity['unit']."<br>";
-		echo "Wind Speed : ".$xml->wind->speed['value'].$xml->wind->speed['unit']."<br>";
-		echo "Weather : ".$xml->weather['value']."<br>";
 
-		echo "</pre>";
-		echo "<hr>";
-		echo "<pre>";
-		print_r($xml);
-		echo "</pre>"; */
-	?>
 <hr />
 	<h3><strong>JSON</strong></h3>
 	<?php
-		/*
+		
 		$url2 = "https://api.openweathermap.org/data/2.5/weather?q=Manila,PH&appid=b4396b5fdb2078756f77d6f7eec6273a&mode";
 		$djson = file_get_contents($url2);
 		$json = json_decode($djson);
 		
-		echo $json->city->name;
-		*/
-		/*
-		?>
-        
-        
-        <table cellpadding="10px" cellspacing="0" bgcolor="#006600">
-        	<tr><td><strong><?php echo "Country : ".$xml->city['name']; ?></strong></td>
-            	<td><strong><?php echo "Weather : ".$xml->weather['value']; ?></strong></td>
-           	</tr>
-        	<tr><td><strong><?php echo "City : ".$xml->city->country; ?></strong></td>
-            	<td rowspan="3"><img src="cloud.png" width="150px" /></td>
-           	</tr>
-        	<tr><td><strong><?php echo "Humidity : ".$xml->humidity['value'].$xml->humidity['unit']; ?></strong></td></tr>
-        	<tr><td><strong><?php echo "Wind Speed : ".$xml->wind->speed['value'].$xml->wind->speed['unit']; ?></strong></td></tr>
-        </table>
-        
-        <?php
-		*/
-		/*
-		echo "<pre>";
-		echo "Country : ".$xml->city['name']."<br>";
-		echo "City : ".$xml->city->country."<br>";
-		echo "Humidity : ".$xml->humidity['value'].$xml->humidity['unit']."<br>";
-		echo "Wind Speed : ".$xml->wind->speed['value'].$xml->wind->speed['unit']."<br>";
-		echo "Weather : ".$xml->weather['value']."<br>";
-
-		echo "</pre>";
-		echo "<hr>";
-		echo "<pre>";
-		print_r($xml);
-		echo "</pre>"; */
+		echo $json->name;
 	?>
 <hr />
 
