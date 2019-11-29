@@ -15,9 +15,9 @@
                 <tr>
                     <th colspan="2">Value Input</th>
                 </tr>
-                <tr><td><label>Sean :</label></td><td><input type="text" name="sean" value="0" /> ( Min = 0 | Max = 30 )</td></tr>
-                <tr><td><label>Kr :</label></td><td><input type="text" name="kr" value="0" /> ( Min = 0 | Max = 30 )</td></tr>
-                <tr><td><label>Jao :</label></td><td><input type="text" name="jao" value="0" /> ( Min = 0 | Max = 30 )</td></tr>
+                <tr><td><label>Sean :</label></td><td><input type="number" name="sean" value="0" /></td></tr>
+                <tr><td><label>Kr :</label></td><td><input type="text" name="kr" value="0" /></td></tr>
+                <tr><td><label>Jao :</label></td><td><input type="text" name="jao" value="0" /></td></tr>
                 <tr>
                     <td align="center" colspan="2"><input type="submit" name="submit" value="submit" /></td>
                 </tr>
@@ -38,13 +38,21 @@
                         $v1 = $_POST['sean'];
                         $v2 = $_POST['kr'];
                         $v3 = $_POST['jao'];
+						
+						$max = array($v1,$v2,$v3);
+						rsort($max);
+						$val4 = $max['0'];
+												
                         //header("location: graph1.php?sean=$v1&kr=$v2&jao=$v3");
-                        echo "<img src='graph1.php?sean=$v1&kr=$v2&jao=$v3' width='400px' />";
+                        echo "<img src='graph1.php?sean=$v1&kr=$v2&jao=$v3&max=$val4' width='400px' />";
                     ?>
                 </td></tr>
             </table>
 		<?php
-        }
+
+		}
+		
+		
         ?>				
         </td>
     </tr>

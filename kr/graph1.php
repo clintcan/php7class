@@ -4,17 +4,11 @@ $sean = $_GET['sean'];
 $kr = $_GET['kr'];
 $jao = $_GET['jao'];
 
-//$sean = 30;
-//$kr = 25;
-//$jao = 20;
+$max = $_GET['max'];
 
-
-
-$maxvalue = "";
-
-$sean2 = ((($sean / $maxvalue) * 480) - 550) * -1;
-$kr2 = ((($kr / $maxvalue) * 480) - 550) * -1;
-$jao2 = ((($jao / $maxvalue) * 480) - 550) * -1;
+$sean2 = ((($sean / $max) * 480) - 550) * -1;
+$kr2 = ((($kr / $max) * 480) - 550) * -1;
+$jao2 = ((($jao / $max) * 480) - 550) * -1;
 
 ini_set("display_errors",1);
 $im = @imagecreate(800,600) or die("Cannot Create");
